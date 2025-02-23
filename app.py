@@ -95,7 +95,7 @@ def index():
 
 
 @app.route("/haxx", methods=["POST"])
-@limiter.limt("3/minute")
+@limiter.limit("3/minute")
 def haxx():
     OUI_LIST = [
         bytes.fromhex(i)
